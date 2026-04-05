@@ -1,0 +1,19 @@
+.text-reveal {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.text-reveal-unit {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%) rotateX(-80deg);
+  transition: opacity 0.6s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: bottom center;
+}
+
+.text-reveal--visible .text-reveal-unit {
+  opacity: 1;
+  transform: translateY(0) rotateX(0deg);
+}

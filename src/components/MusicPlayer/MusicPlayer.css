@@ -1,0 +1,77 @@
+.music-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 2px solid var(--color-accent);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(134, 22, 37, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(134, 22, 37, 0.5);
+}
+
+.music-btn-icon {
+  display: none;
+}
+
+.music-btn-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 18px;
+}
+
+.music-btn-bars span {
+  display: block;
+  width: 3px;
+  background: var(--color-white);
+  border-radius: 2px;
+  height: 6px;
+  transition: height 0.2s ease;
+}
+
+.music-btn--playing .music-btn-bars span:nth-child(1) {
+  animation: musicBar 0.5s ease infinite alternate;
+  animation-delay: 0s;
+}
+
+.music-btn--playing .music-btn-bars span:nth-child(2) {
+  animation: musicBar 0.5s ease infinite alternate;
+  animation-delay: 0.15s;
+}
+
+.music-btn--playing .music-btn-bars span:nth-child(3) {
+  animation: musicBar 0.5s ease infinite alternate;
+  animation-delay: 0.3s;
+}
+
+.music-btn--playing .music-btn-bars span:nth-child(4) {
+  animation: musicBar 0.5s ease infinite alternate;
+  animation-delay: 0.45s;
+}
+
+@keyframes musicBar {
+  from { height: 4px; }
+  to { height: 18px; }
+}
+
+@media (max-width: 768px) {
+  .music-btn {
+    bottom: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+  }
+}

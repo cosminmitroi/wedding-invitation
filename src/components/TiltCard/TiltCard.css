@@ -1,0 +1,26 @@
+.tilt-card {
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-card-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .tilt-card {
+    transform: none !important;
+  }
+
+  .tilt-card-glare {
+    display: none;
+  }
+}
