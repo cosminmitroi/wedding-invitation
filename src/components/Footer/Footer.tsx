@@ -5,9 +5,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <h3 className="footer-names">Gabriela & Cosmin</h3>
-        <p className="footer-date">24 October 2026 &middot; Timisoara</p>
+        <p className="footer-date">24 Octombrie 2026 &middot; Timișoara</p>
         <div className="footer-hearts">&#9829; &#9829; &#9829;</div>
-        <p className="footer-made">Made with love</p>
+        <p className="footer-made">Făcut cu dragoste</p>
       </div>
     </footer>
   );

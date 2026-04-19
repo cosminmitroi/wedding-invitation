@@ -66,7 +66,7 @@ export default function Hero({ scrollY }: HeroProps) {
         }}
       >
         <p className="hero-invite-text">
-          <TextReveal text="Together with their families" mode="word" staggerMs={60} />
+          <TextReveal text="Împreună cu familiile noastre" mode="word" staggerMs={60} />
         </p>
         <h1 className="hero-names">
           <TextReveal text="Gabriela" tag="span" className="hero-name" mode="char" delay={400} staggerMs={50} />
@@ -74,14 +74,14 @@ export default function Hero({ scrollY }: HeroProps) {
           <TextReveal text="Cosmin" tag="span" className="hero-name" mode="char" delay={800} staggerMs={50} />
         </h1>
         <p className="hero-tagline">
-          <TextReveal text="invite you to celebrate their wedding" mode="word" delay={1200} staggerMs={60} />
+          <TextReveal text="vă invită să sărbătoriți alături de noi" mode="word" delay={1200} staggerMs={60} />
         </p>
         <div className="hero-date">
           <span className="hero-date-line" />
-          <span className="hero-date-text">24 October 2026</span>
+          <span className="hero-date-text">24 Octombrie 2026</span>
           <span className="hero-date-line" />
         </div>
-        <p className="hero-location">Timisoara, Romania</p>
+        <p className="hero-location">Timișoara, România</p>
       </div>
       <div className="hero-scroll-indicator">
         <span>&#8595;</span>

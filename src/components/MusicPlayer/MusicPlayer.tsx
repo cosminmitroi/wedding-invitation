@@ -50,8 +50,8 @@ export default function MusicPlayer() {
       <button
         className={`music-btn ${playing ? 'music-btn--playing' : ''}`}
         onClick={toggle}
-        aria-label={playing ? 'Pause music' : 'Play music'}
-        title={playing ? 'Pause music' : 'Play music'}
+        aria-label={playing ? 'Pauză muzică' : 'Pornește muzica'}
+        title={playing ? 'Pauză muzică' : 'Pornește muzica'}
       >
         <span className="music-btn-icon">{playing ? '♪' : '♪'}</span>
         <span className="music-btn-bars">
