@@ -74,7 +74,7 @@ export default function Hero({ scrollY }: HeroProps) {
           <TextReveal text="Cosmin" tag="span" className="hero-name" mode="char" delay={800} staggerMs={50} />
         </h1>
         <p className="hero-tagline">
-          <TextReveal text="vă invită să sărbătoriți alături de noi" mode="word" delay={1200} staggerMs={60} />
+          <TextReveal text="vă invităm să sărbătoriți alături de noi" mode="word" delay={1200} staggerMs={60} />
         </p>
         <div className="hero-date">
           <span className="hero-date-line" />
