@@ -12,7 +12,7 @@
 .hero-bg {
   position: absolute;
   inset: -20% 0;
-  background: url('/images/hero-bg.jpg') center/cover no-repeat;
+  background: url('/images/hero-bg.jpg') center center / cover no-repeat;
   will-change: transform;
   z-index: 0;
 }
@@ -22,8 +22,9 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(134, 22, 37, 0.55) 0%,
-    rgba(45, 45, 45, 0.4) 100%
+    rgba(60, 10, 20, 0.35) 0%,
+    rgba(30, 10, 15, 0.20) 45%,
+    rgba(15, 5, 10, 0.60) 100%
   );
   z-index: 1;
 }

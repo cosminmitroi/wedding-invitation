@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "wedding-dev",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "export PATH=\"$HOME/.local/bin:$PATH\" && eval \"$(fnm env)\" && npm run dev -- --host"],
+      "port": 5173
+    }
+  ]
+}
