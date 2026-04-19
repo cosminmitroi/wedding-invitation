@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './EnvelopeIntro.css';
 
 interface EnvelopeIntroProps {
@@ -6,48 +6,93 @@ interface EnvelopeIntroProps {
 }
 
 export default function EnvelopeIntro({ onOpen }: EnvelopeIntroProps) {
-  const [isMobile, setIsMobile] = useState(false);
   const [opened, setOpened] = useState(false);
   const [hidden, setHidden] = useState(false);
 
-  useEffect(() => {
-    setIsMobile(window.innerWidth <= 768);
-  }, []);
-
-  if (!isMobile || hidden) return null;
+  if (hidden) return null;
 
   const handleOpen = () => {
+    if (opened) return;
     setOpened(true);
     setTimeout(() => {
       setHidden(true);
       onOpen();
-    }, 1600);
+    }, 2400);
   };
 
   return (
-    <div className={`envelope-overlay ${opened ? 'envelope-overlay--opened' : ''}`}>
-      <div className={`envelope ${opened ? 'envelope--opened' : ''}`} onClick={handleOpen}>
-        <div className="envelope-back" />
-        <div className="envelope-flap" />
-        <div className="envelope-card">
-          <div className="envelope-card-inner">
-            <p className="envelope-card-script">You are invited to</p>
-            <h2 className="envelope-card-names">Gabriela & Cosmin</h2>
-            <p className="envelope-card-date">24.10.2026</p>
+    <div
+      className={`env-overlay${opened ? ' env-overlay--opened' : ''}`}
+      onClick={handleOpen}
+    >
+      {/* Subtle bokeh dots in background */}
+      <div className="env-bokeh">
+        {Array.from({ length: 12 }).map((_, i) => (
+          <span key={i} className="env-bokeh-dot" />
+        ))}
+      </div>
+
+      <div className="env-scene">
+
+        {/* ── Envelope ── */}
+        <div className={`env${opened ? ' env--opened' : ''}`}>
+
+          {/* Body — cream rectangle, always behind everything */}
+          <div className="env-body">
+            {/* left diagonal fold */}
+            <div className="env-tri env-tri--left" />
+            {/* right diagonal fold */}
+            <div className="env-tri env-tri--right" />
+            {/* bottom V fold */}
+            <div className="env-tri env-tri--bottom" />
+          </div>
+
+          {/* Paper invitation card — slides out when envelope opens */}
+          <div className="env-paper">
+            <div className="env-paper-content">
+              <p className="env-paper-eyebrow">ești invitat la nunta</p>
+
+              <h2 className="env-paper-names">
+                <span className="env-paper-name">Gabriela</span>
+                <span className="env-paper-amp">&amp;</span>
+                <span className="env-paper-name">Cosmin</span>
+              </h2>
+
+              <div className="env-paper-divider">
+                <span className="env-paper-divider-gem">◆</span>
+              </div>
+
+              <p className="env-paper-date">24 Octombrie 2026</p>
+              <p className="env-paper-city">Timișoara, România</p>
+            </div>
+          </div>
+
+          {/* Top flap — rotates open in 3D */}
+          <div className="env-flap">
+            {/* outside face (linen texture, visible before opening) */}
+            <div className="env-flap-face" />
+            {/* inside face (visible after flap flips back) */}
+            <div className="env-flap-back" />
+          </div>
+
+          {/* Wax seal — sits at the flap crease, disappears on open */}
+          <div className="env-seal">
+            <div className="env-seal-disc">
+              <span className="env-seal-text">G&amp;C</span>
+            </div>
+            {/* drip blobs */}
+            <span className="env-seal-drip env-seal-drip--1" />
+            <span className="env-seal-drip env-seal-drip--2" />
+            <span className="env-seal-drip env-seal-drip--3" />
           </div>
         </div>
-        <div className="envelope-front" />
 
-        {/* Wax seal stamp */}
-        <div className="envelope-seal">
-          <div className="envelope-seal-inner">
-            <span className="envelope-seal-initials">G&C</span>
-          </div>
-        </div>
-
-        {!opened && (
-          <p className="envelope-tap">Tap to open</p>
-        )}
+        {/* CTA text */}
+        <p className={`env-cta${opened ? ' env-cta--hide' : ''}`}>
+          <span className="env-cta-arrow">↓</span>
+          &nbsp; apasă pentru a deschide &nbsp;
+          <span className="env-cta-arrow">↓</span>
+        </p>
       </div>
     </div>
   );
