@@ -4,24 +4,12 @@ import './FAQ.css';
 
 const faqs = [
   {
-    q: 'Care este codul vestimentar?',
-    a: 'Vă recomandăm o ținută formală. Domnii în costum, iar doamnele în rochii de cocktail sau seară. Vă rugăm să evitați culoarea albă, deoarece este rezervată miresei.',
-  },
-  {
-    q: 'Pot veni însoțit(ă)?',
-    a: 'Avem un număr limitat de locuri, vă rugăm să verificați invitația pentru numărul de persoane incluse. Pentru orice întrebare, nu ezitați să ne contactați.',
-  },
-  {
     q: 'Unde pot parca?',
     a: 'Locația dispune de o parcare spațioasă disponibilă pentru toți invitații. Indicații detaliate vor fi oferite mai aproape de data evenimentului.',
   },
   {
-    q: 'Ce ne puteți spune despre cadouri?',
-    a: 'Prezența voastră este cel mai prețios cadou. Totuși, dacă doriți să contribuiți, vom avea un loc special amenajat la recepție.',
-  },
-  {
     q: 'Există cazare în apropiere?',
-    a: 'Da! Vom împărtăși o listă de hoteluri recomandate în apropierea locației, cu tarife speciale pentru invitații noștri.',
+    a: 'Da! Vom împărtăși o listă de hoteluri recomandate în apropierea locației.',
   },
   {
     q: 'La ce oră să ajungem?',
