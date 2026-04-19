@@ -13,13 +13,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(134, 22, 37, 0.4);
+  box-shadow: 0 4px 15px rgba(110, 14, 27, 0.45);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .music-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(134, 22, 37, 0.5);
+  box-shadow: 0 6px 20px rgba(110, 14, 27, 0.55);
 }
 
 .music-btn-icon {
