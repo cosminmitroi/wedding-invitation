@@ -3,7 +3,7 @@ import TextReveal from '../TextReveal/TextReveal';
 import './RSVPForm.css';
 
 // Replace with your Google Apps Script Web App URL after deployment
-const GOOGLE_SCRIPT_URL = '';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzT1uGuG8SXFLMT_9VwNeET0ArZml3iLNEISX1Oo_khu-rsmud1F18Ye7OHdpA79Q/exec';
 
 interface FormData {
   name: string;
