@@ -75,15 +75,11 @@ export default function EnvelopeIntro({ onOpen }: EnvelopeIntroProps) {
             <div className="env-flap-back" />
           </div>
 
-          {/* Wax seal — sits at the flap crease, disappears on open */}
+          {/* Monogram — sits at the flap crease, disappears on open */}
           <div className="env-seal">
-            <div className="env-seal-disc">
-              <span className="env-seal-text">G&amp;C</span>
-            </div>
-            {/* drip blobs */}
-            <span className="env-seal-drip env-seal-drip--1" />
-            <span className="env-seal-drip env-seal-drip--2" />
-            <span className="env-seal-drip env-seal-drip--3" />
+            <span className="env-seal-text">
+              G<span className="env-seal-amp">&amp;</span>C
+            </span>
           </div>
         </div>
 
