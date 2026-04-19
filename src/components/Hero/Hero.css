@@ -12,7 +12,7 @@
 .hero-bg {
   position: absolute;
   inset: -20% 0;
-  background: url('/images/hero-bg.webp') center center / cover no-repeat;
+  background: url('/images/hero-bg.jpg') center 25% / cover no-repeat;
   will-change: transform;
   z-index: 0;
 }
