@@ -30,15 +30,15 @@ export default function Countdown() {
   }, []);
 
   const units: { label: string; value: number }[] = [
-    { label: 'Days', value: timeLeft.days },
-    { label: 'Hours', value: timeLeft.hours },
-    { label: 'Minutes', value: timeLeft.minutes },
-    { label: 'Seconds', value: timeLeft.seconds },
+    { label: 'Zile', value: timeLeft.days },
+    { label: 'Ore', value: timeLeft.hours },
+    { label: 'Minute', value: timeLeft.minutes },
+    { label: 'Secunde', value: timeLeft.seconds },
   ];
 
   return (
     <section className="countdown">
-      <h2 className="countdown-heading scroll-fade-up">Counting Down To Our Day</h2>
+      <h2 className="countdown-heading scroll-fade-up">Numărătoarea inversă până la ziua noastră</h2>
       <div className="countdown-grid stagger-children">
         {units.map((u) => (
           <div className="countdown-unit" key={u.label}>
